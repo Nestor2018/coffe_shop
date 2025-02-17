@@ -9,16 +9,18 @@
       {% csrf_token %} {{ form|crispy }}
 
       <div class="flex items-center justify-between">
-        {% comment %}
         <p class="text-sm text-gray-500">
-          No account?
-          <a class="underline" href="#">Sign up</a>
+          No tienes cuenta?
+              <a
+                class="underline"
+                href="{% url 'registro' %}"
+                >Registrate</a
+              >
         </p>
-        {% endcomment %}
 
         <button
           type="submit"
-          class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+          class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
         >
           Login
         </button>
