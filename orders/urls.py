@@ -1,4 +1,7 @@
-from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
 
-urlpatterns = []
+from .views import MyOrderView
+
+urlpatterns = [
+    path("mi-orden", MyOrderView.as_view(), name="my_order"),
+]
